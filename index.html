@@ -131,13 +131,22 @@
     </main>
 
     <footer class="kann-footer">
-  <div class="footer-top">
+ <div class="footer-top">
     <div class="newsletter-content">
-      <p class="newsletter-title">Abonnez-vous à notre newsletter</p>
-      <p class="newsletter-subtitle">pour recevoir nos offres et suivre notre actualité.</p>
+        <p class="newsletter-title">Abonnez-vous à notre newsletter</p>
+        <p class="newsletter-subtitle">pour recevoir nos offres et suivre notre actualité.</p>
     </div>
-    <a href="#" class="subscribe-btn">s'abonner</a>
-  </div>
+    
+    <form id="subscribe-form" class="subscribe-form">
+        <div class="input-group">
+            <input type="text" id="userName" placeholder="votre nom" autocomplete="off">
+        </div>
+        <div class="input-group">
+            <input type="text" id="userEmail" placeholder="votre email" autocomplete="off">
+        </div>
+        <button type="submit" class="subscribe-btn">s'abonner</button>
+    </form>
+</div>
   
   <hr class="footer-divider">
   

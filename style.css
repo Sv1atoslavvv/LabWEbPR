@@ -197,11 +197,63 @@ h1, h2 {
 .newsletter-title { margin: 0; font-weight: 600; font-size: 24px; line-height: 1.2; }
 .newsletter-subtitle { margin: 0; font-weight: 400; font-size: 24px; line-height: 1.2; }
 
-.kann-footer .subscribe-btn {
-    font-family: 'Oswald', sans-serif; font-size: 48px; font-weight: 500; text-decoration: none;
-    color: #000; border: none; text-transform: lowercase; margin-left: 50px; line-height: 1; transition: opacity 0.3s ease;
+/* --- ФОРМА ПІДПИСКИ У ФУТЕРІ --- */
+.subscribe-form {
+    display: flex;
+    align-items: flex-end; /* Щоб лінія тексту і кнопка були на одному рівні */
+    gap: 30px;
+    margin-left: 40px;
 }
-.kann-footer .subscribe-btn:hover { opacity: 0.5; }
+
+/* Стиль для полів (просто лінія знизу) */
+.subscribe-form input {
+    border: none;
+    border-bottom: 1px solid #8c8c8c;
+    background: transparent;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #000;
+    padding: 5px 0;
+    width: 200px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+/* Колір плейсхолдера (підказки в полі) */
+.subscribe-form input::placeholder {
+    color: #8c8c8c;
+    text-transform: lowercase;
+}
+
+/* Коли клікаємо на поле - лінія стає чорною і товщою */
+.subscribe-form input:focus {
+    border-bottom: 2px solid #000;
+}
+
+/* КЛАС ПОМИЛКИ (з методички) */
+.subscribe-form input.error {
+    border-bottom: 2px solid #ff0000; /* Червона лінія */
+}
+
+/* Наша гігантська кнопка, тепер вона type="submit" */
+.subscribe-form .subscribe-btn {
+    font-family: 'Oswald', sans-serif;
+    font-size: 48px;
+    font-weight: 500;
+    color: #000;
+    background: none;
+    border: none;
+    text-transform: lowercase;
+    cursor: pointer;
+    line-height: 0.9;
+    padding: 0;
+    transition: opacity 0.3s ease;
+}
+
+.subscribe-form .subscribe-btn:hover {
+    opacity: 0.5;
+}
+
 
 .footer-divider { border: 0; border-top: 1px solid #e6e6e6; margin: 0; margin-bottom: 60px; }
 .footer-grid-container { display: grid; grid-template-columns: 1.5fr repeat(3, 1fr); gap: 30px; }
@@ -226,7 +278,19 @@ h1, h2 {
 .burger-btn { display: none; flex-direction: column; gap: 6px; cursor: pointer; z-index: 2000; }
 .burger-btn span { width: 25px; height: 2px; background-color: #000; transition: all 0.3s ease; }
 
-@media (max-width: 900px) {
+@media (max-width: 900px) 
+{
+    /* Форма підписки на мобільному */
+    .subscribe-form {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-left: 0;
+        gap: 20px;
+        width: 100%;
+    }
+    .subscribe-form input {
+        width: 100%; 
+    }
     .header { padding: 20px 30px; transition: height 0.3s ease; }
     .burger-btn { display: flex; }
     .main-nav, .secondary-nav, .lang-switch { display: none; }
