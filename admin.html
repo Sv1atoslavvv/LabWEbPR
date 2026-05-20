@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin — KANN Design</title>
+
+    <!-- Підключаємо шрифти як на головній -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
+
+    <!-- Основні стилі сайту -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Стилі адмінки -->
+    <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<!-- Хедер як на головній -->
+<header class="header">
+    <div class="header-left">
+        <a href="index.html" class="logo">
+            <svg viewBox="0 0 102 28" height="24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <polygon points="0,28 0,0 7,0 7,12 15,0 24,0 14,14 24,28 15,28 7,16 7,28" />
+                <path d="M 23,28 L 35,0 H 44 V 28 H 37 V 17 H 30 L 26,28 Z M 37,11 V 4 L 33,11 Z" fill-rule="evenodd" />
+                <polygon points="49,28 49,0 56,0 65,14 65,0 72,0 72,28 65,28 56,14 56,28" />
+                <polygon points="77,28 77,0 84,0 93,14 93,0 100,0 100,28 93,28 84,14 84,28" />
+            </svg>
+        </a>
+    </div>
+
+    <div class="header-right">
+        <!-- Кнопка logout -->
+        <button class="logout-btn">logout</button>
+    </div>
+</header>
+
+<!-- Головна секція -->
+<section class="admin-section">
+
+    <div class="admin-container">
+
+        <!-- Заголовок -->
+        <h1>subscribers</h1>
+
+        <!-- Таблиця підписників -->
+        <table class="admin-table">
+
+            <thead>
+                <tr>
+                    <th>name</th>
+                    <th>email</th>
+                </tr>
+            </thead>
+
+            <tbody id="subscribers-list">
+                <!-- JS сюди буде вставляти дані -->
+            </tbody>
+
+        </table>
+
+        <!-- Блок для неавторизованих -->
+        <div class="access-denied" style="display: none;">
+            <p>access denied</p>
+            <a href="login.html">login</a>
+        </div>
+
+    </div>
+
+</section>
+
+<script src="admin.js"></script>
+
+</body>
+</html>

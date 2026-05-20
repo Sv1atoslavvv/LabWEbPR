@@ -1,0 +1,145 @@
+/* Секція */
+.admin-section {
+    min-height: 100vh;
+
+    background-color: #f3f3f3;
+
+    padding: 180px 50px 80px;
+}
+
+/* Контейнер */
+.admin-container {
+    max-width: 1400px;
+
+    margin: 0 auto;
+}
+
+/* Верх */
+.admin-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 60px;
+}
+
+/* Заголовок */
+.admin-container h1 {
+    font-size: 72px;
+
+    font-weight: 600;
+
+    text-transform: lowercase;
+
+    margin-bottom: 0;
+}
+
+/* Кнопка logout */
+.logout-btn {
+    border: none;
+
+    background: none;
+
+    font-family: 'Oswald', sans-serif;
+
+    font-size: 32px;
+
+    text-transform: lowercase;
+
+    cursor: pointer;
+
+    transition: opacity 0.3s ease;
+}
+
+.logout-btn:hover {
+    opacity: 0.5;
+}
+
+/* Таблиця */
+.admin-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background-color: #fff;
+}
+
+/* Заголовки */
+.admin-table th {
+    text-align: left;
+
+    padding: 25px;
+
+    font-size: 14px;
+
+    text-transform: lowercase;
+
+    color: #8c8c8c;
+
+    border-bottom: 1px solid #ddd;
+}
+
+/* Дані */
+.admin-table td {
+    padding: 25px;
+
+    border-bottom: 1px solid #eee;
+
+    font-size: 16px;
+}
+
+/* Hover */
+.admin-table tr:hover {
+    background-color: #fafafa;
+}
+
+/* Access denied */
+.access-denied {
+    text-align: center;
+
+    padding: 100px 20px;
+}
+
+.access-denied p {
+    font-size: 48px;
+
+    margin-bottom: 20px;
+
+    text-transform: lowercase;
+}
+
+.access-denied a {
+    color: #000;
+
+    text-decoration: none;
+
+    border-bottom: 1px solid #000;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .admin-section {
+        padding: 140px 20px 60px;
+    }
+
+    .admin-top {
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+    .admin-container h1 {
+        font-size: 42px;
+    }
+
+    .logout-btn {
+        font-size: 24px;
+    }
+
+    .admin-table th,
+    .admin-table td {
+        padding: 15px;
+    }
+}

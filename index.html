@@ -10,7 +10,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap" rel="stylesheet">
     
-   <link rel="stylesheet" href="style.css?v=2">
+   <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+    <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
 
@@ -41,6 +45,7 @@
             <a href="#">rechercher</a>
             <a href="#">points de vente</a>
             <a href="#">panier (0)</a>
+            <a href="login.html" class="auth-link">login</a>
         </nav>
     </div>
 <nav class="main-nav-mobile" style="display: none;">
@@ -114,6 +119,38 @@
             </div>
         </section>
 
+         <!-- Слайдери -->
+<section class="kann-slider-section">
+
+    
+    <div class="swiper kannSwiper">
+
+        
+        <div class="swiper-wrapper">
+
+            
+            <div class="swiper-slide">
+                <img src="img/04-sofa-yellow.png" alt="Sofa">
+            </div>
+
+            
+            <div class="swiper-slide">
+                <img src="img/07-chairs-duo.png" alt="Chairs">
+            </div>
+
+            
+            <div class="swiper-slide">
+                <img src="img/08-slatted-benches.png" alt="Benches">
+            </div>
+
+        </div>
+
+    
+        <div class="swiper-pagination"></div>
+
+    </div>
+
+</section>
         <section class="category-list">
             <nav>
                 <ul>
@@ -181,6 +218,7 @@
     </div>
   </div>
 </footer>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script src="script.js"></script>
 </body>
 </html>

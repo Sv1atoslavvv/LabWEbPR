@@ -1,0 +1,130 @@
+/* Секція авторизації */
+.login-section {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #f3f3f3;
+
+    padding: 40px;
+}
+
+/* Контейнер форми */
+.login-box {
+    width: 100%;
+    max-width: 420px;
+
+    background-color: #fff;
+
+    padding: 50px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* Заголовок */
+.login-box h1 {
+    margin-bottom: 40px;
+
+    font-size: 42px;
+    font-weight: 600;
+
+    font-family: 'Oswald', sans-serif;
+
+    color: #5d4037;
+
+    text-transform: lowercase;
+}
+
+/* Форма */
+#login-form {
+    display: flex;
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+/* Поля */
+#login-form input {
+    border: none;
+    border-bottom: 1px solid #999;
+
+    padding: 10px 0;
+
+    font-size: 16px;
+
+    outline: none;
+
+    background: transparent;
+
+    font-family: 'Inter', sans-serif;
+
+    color: #000;
+
+    transition: border-color 0.3s ease;
+}
+
+/* Placeholder */
+#login-form input::placeholder {
+    color: #8c8c8c;
+}
+
+/* Focus */
+#login-form input:focus {
+    border-bottom: 2px solid #5d4037;
+}
+
+/* Кнопка */
+#login-form button {
+    margin-top: 20px;
+
+    border: none;
+
+    background-color: #8d6e63;
+
+    color: #fff;
+
+    padding: 14px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+    font-family: 'Oswald', sans-serif;
+
+    text-transform: lowercase;
+
+    transition: 0.3s;
+
+    border-radius: 4px;
+}
+
+/* Hover */
+#login-form button:hover {
+    background-color: #6d4c41;
+}
+
+/* Помилка */
+.login-error {
+    color: red;
+
+    font-size: 14px;
+
+    min-height: 20px;
+
+    font-family: 'Inter', sans-serif;
+}
+
+/* Адаптив */
+@media (max-width: 600px) {
+    .login-box {
+        padding: 35px 25px;
+    }
+
+    .login-box h1 {
+        font-size: 32px;
+    }
+}

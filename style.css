@@ -357,3 +357,65 @@ h1, h2 {
     .kann-footer .subscribe-btn { margin-left: 0; font-size: 32px; }
     .first-col { padding-top: 0; }
 }
+/* SWIPER SLIDER */
+
+.kann-slider-section {
+    padding: 100px 50px;
+
+    background-color: #f3f3f3;
+}
+
+
+.kannSwiper {
+    width: 60%;
+}
+
+
+.swiper-slide {
+    overflow: hidden;
+}
+
+
+.swiper-slide img {
+    width: 100%;
+
+    height: 700px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+/* Pagination */
+.swiper-pagination {
+    margin-top: 30px;
+
+    position: relative !important;
+}
+
+/* Pagination dots */
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+
+    background-color: #999;
+
+    opacity: 1;
+}
+
+/* Active dot */
+.swiper-pagination-bullet-active {
+    background-color: #000;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .kann-slider-section {
+        padding: 60px 20px;
+    }
+
+    .swiper-slide img {
+        height: 400px;
+    }
+}

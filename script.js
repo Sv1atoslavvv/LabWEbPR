@@ -51,6 +51,21 @@ if (subscribeForm) {
                 email: userEmailInput.value.trim()
             };
 
+            
+const subscribers =
+    JSON.parse(localStorage.getItem('subscribers')) || [];
+
+
+// Додаємо нового
+subscribers.push(formData);
+
+
+// Зберігаємо
+localStorage.setItem(
+    'subscribers',
+    JSON.stringify(subscribers)
+);
+
             // ---- ОСЬ ТУТ МАГІЯ ДЛЯ F12 ----
             console.log("ВІДПРАВКА ДАНИХ З ФОРМИ:");
             console.log("Ім'я:", formData.name);
@@ -69,7 +84,7 @@ if (subscribeForm) {
             .then(json => {
                 console.log("СЕРВЕР ПРИЙНЯВ ДАНІ:", json);
                 
-                // Замінюємо форму на красивий текст "Дякуємо"
+                
                 subscribeForm.innerHTML = `<p style="font-family: 'Oswald', sans-serif; font-size: 32px; color: #000; text-transform: lowercase;">merci, ${formData.name} !</p>`;
             })
             .catch(error => {
@@ -82,3 +97,73 @@ if (subscribeForm) {
     userNameInput.addEventListener('input', () => userNameInput.classList.remove('error'));
     userEmailInput.addEventListener('input', () => userEmailInput.classList.remove('error'));
 }
+// Шукаємо кнопку login/logout
+const authLink = document.querySelector('.auth-link');
+
+
+// Якщо кнопка існує
+if (authLink) {
+
+    // Перевіряємо чи адмін залогінений
+    const isAdmin = localStorage.getItem('isAdmin');
+
+
+    // Якщо залогінений
+    if (isAdmin === 'true') {
+
+        // Міняємо текст
+        authLink.textContent = 'logout';
+
+
+        // При кліку logout
+        authLink.addEventListener('click', function(e) {
+
+            // Забираємо стандартний перехід
+            e.preventDefault();
+
+            // Видаляємо авторизацію
+            localStorage.removeItem('isAdmin');
+
+            // Перекидаємо на головну
+            window.location.href = 'index.html';
+        });
+
+    }
+}
+// SWIPER
+
+
+const swiper = new Swiper('.kannSwiper', {
+
+    // Безкінечний цикл
+    loop: true,
+
+    // Відстань 
+    spaceBetween: 30,
+
+    
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+    },
+
+    // Pagination dots
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+
+    
+    breakpoints: {
+
+        // Mobile
+        0: {
+            slidesPerView: 1,
+        },
+
+        // Desktop
+        900: {
+            slidesPerView: 1,
+        }
+    }
+});
