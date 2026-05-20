@@ -31,7 +31,7 @@ if (subscribeForm) {
             userNameInput.classList.remove('error');
         }
 
-        // 2. Перевіряємо правильність Email (за методичкою)
+        
         const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailPattern.test(userEmailInput.value.trim())) {
             userEmailInput.classList.add('error'); // Робимо лінію червоною
@@ -66,13 +66,13 @@ localStorage.setItem(
     JSON.stringify(subscribers)
 );
 
-            // ---- ОСЬ ТУТ МАГІЯ ДЛЯ F12 ----
+            // F12 
             console.log("ВІДПРАВКА ДАНИХ З ФОРМИ:");
             console.log("Ім'я:", formData.name);
             console.log("Пошта:", formData.email);
-            // --------------------------------
+            
 
-            // Робимо реальний запит в інтернет на тестовий сервер
+            
             fetch('https://jsonplaceholder.typicode.com/posts', {
                 method: 'POST',
                 body: JSON.stringify(formData),
@@ -93,25 +93,25 @@ localStorage.setItem(
         }
     });
 
-    // Прибираємо червоний колір
+    
     userNameInput.addEventListener('input', () => userNameInput.classList.remove('error'));
     userEmailInput.addEventListener('input', () => userEmailInput.classList.remove('error'));
 }
-// Шукаємо кнопку login/logout
+
 const authLink = document.querySelector('.auth-link');
 
 
-// Якщо кнопка існує
+
 if (authLink) {
 
     // Перевіряємо чи адмін залогінений
     const isAdmin = localStorage.getItem('isAdmin');
 
 
-    // Якщо залогінений
+    
     if (isAdmin === 'true') {
 
-        // Міняємо текст
+        
         authLink.textContent = 'logout';
 
 
@@ -121,24 +121,24 @@ if (authLink) {
             // Забираємо стандартний перехід
             e.preventDefault();
 
-            // Видаляємо авторизацію
+            
             localStorage.removeItem('isAdmin');
 
-            // Перекидаємо на головну
+        
             window.location.href = 'index.html';
         });
 
     }
 }
-// SWIPER
+// Свайпер
 
 
 const swiper = new Swiper('.kannSwiper', {
 
-    // Безкінечний цикл
+    
     loop: true,
 
-    // Відстань 
+    // Відстань
     spaceBetween: 30,
 
     
@@ -147,7 +147,7 @@ const swiper = new Swiper('.kannSwiper', {
         disableOnInteraction: false,
     },
 
-    // Pagination dots
+    // точки
     pagination: {
         el: '.swiper-pagination',
         clickable: true,
@@ -156,7 +156,7 @@ const swiper = new Swiper('.kannSwiper', {
     
     breakpoints: {
 
-        // Mobile
+        
         0: {
             slidesPerView: 1,
         },

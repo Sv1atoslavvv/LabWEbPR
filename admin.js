@@ -1,17 +1,17 @@
-// Перевіряємо чи залогінений адмін
+
 const isAdmin = localStorage.getItem('isAdmin');
 
-// Таблиця
+
 const adminTable = document.querySelector('.admin-table');
 
-// Access denied
+
 const accessDenied = document.querySelector('.access-denied');
 
-// tbody таблиці
+// юзери в таблиці
 const subscribersList = document.getElementById('subscribers-list');
 
 
-// Якщо НЕ адмін
+
 if (isAdmin !== 'true') {
 
     adminTable.style.display = 'none';
@@ -20,7 +20,7 @@ if (isAdmin !== 'true') {
 
 } else {
 
-    // Беремо підписників
+    
     const subscribers =
         JSON.parse(localStorage.getItem('subscribers')) || [];
 
@@ -36,10 +36,10 @@ if (isAdmin !== 'true') {
 
     } else {
 
-        // Перебираємо всіх
+        
         subscribers.forEach(subscriber => {
 
-            // Створюємо рядок
+            
             const row = document.createElement('tr');
 
             row.innerHTML = `
@@ -54,7 +54,7 @@ if (isAdmin !== 'true') {
 }
 
 
-// Logout
+
 const logoutBtn = document.querySelector('.logout-btn');
 
 logoutBtn.addEventListener('click', () => {

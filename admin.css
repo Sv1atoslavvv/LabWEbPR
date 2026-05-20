@@ -1,4 +1,3 @@
-/* Секція */
 .admin-section {
     min-height: 100vh;
 
@@ -34,7 +33,7 @@
     margin-bottom: 0;
 }
 
-/* Кнопка logout */
+
 .logout-btn {
     border: none;
 
@@ -116,7 +115,7 @@
     border-bottom: 1px solid #000;
 }
 
-/* Mobile */
+/* для телефону */
 @media (max-width: 768px) {
 
     .admin-section {
